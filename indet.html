@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Star GharVhada Pvt. Ltd. | Property Management Nepal</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0d3b2e;
+      --secondary: #1d6b4f;
+      --accent: #8bd450;
+      --light-green: #eff8f2;
+      --dark: #10231c;
+      --gray: #66736d;
+      --white: #ffffff;
+    }
+
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: #fff;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: rgba(13, 59, 46, 0.97);
+      padding: 15px 0;
+    }
+
+    .navbar-brand {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: white !important;
+    }
+
+    .navbar-brand span {
+      color: var(--accent);
+    }
+
+    .nav-link {
+      color: #fff !important;
+      margin-left: 15px;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: var(--accent) !important;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 92vh;
+      background:
+        linear-gradient(rgba(7, 36, 28, .82), rgba(7, 36, 28, .88)),
+        url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=2000&q=80")
+        center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 800;
+      line-height: 1.05;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #e4eee9;
+      line-height: 1.8;
+    }
+
+    .btn-main {
+      background: var(--accent);
+      color: #15321f;
+      font-weight: 700;
+      border: none;
+      padding: 13px 25px;
+      border-radius: 50px;
+    }
+
+    .btn-main:hover {
+      background: #a3ed69;
+      color: #10231c;
+    }
+
+    .btn-outline-light {
+      border-radius: 50px;
+      padding: 12px 25px;
+    }
+
+    /* SECTION */
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title small {
+      color: var(--secondary);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+      font-weight: 800;
+      font-size: 2.5rem;
+      margin-top: 8px;
+    }
+
+    .section-title p {
+      color: var(--gray);
+      max-width: 650px;
+      margin: auto;
+    }
+
+    /* ABOUT */
+    .about-box {
+      background: var(--light-green);
+      border-radius: 25px;
+      padding: 45px;
+    }
+
+    .about-box h3 {
+      font-weight: 800;
+    }
+
+    .about-box p {
+      color: var(--gray);
+      line-height: 1.8;
+    }
+
+    .about-image {
+      border-radius: 25px;
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      object-fit: cover;
+    }
+
+    /* SERVICES */
+    .service-card {
+      border: none;
+      border-radius: 22px;
+      padding: 35px 25px;
+      height: 100%;
+      background: white;
+      box-shadow: 0 10px 35px rgba(0,0,0,.07);
+      transition: .3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 45px rgba(0,0,0,.12);
+    }
+
+    .service-icon {
+      width: 65px;
+      height: 65px;
+      background: var(--light-green);
+      color: var(--secondary);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 22px;
+    }
+
+    .service-card h5 {
+      font-weight: 750;
+    }
+
+    .service-card p {
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    /* PROPERTY */
+    .property-section {
+      background: #f7faf8;
+    }
+
+    .property-card {
+      border: none;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,.06);
+      background: white;
+      transition: .3s;
+    }
+
+    .property-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .property-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .property-content {
+      padding: 25px;
+    }
+
+    .property-content h5 {
+      font-weight: 750;
+    }
+
+    .property-content p {
+      color: var(--gray);
+    }
+
+    .badge-custom {
+      background: var(--light-green);
+      color: var(--secondary);
+      padding: 7px 12px;
+      border-radius: 50px;
+      font-size: .8rem;
+    }
+
+    /* PROCESS */
+    .process-number {
+      width: 55px;
+      height: 55px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+      margin: auto;
+    }
+
+    .process-box h5 {
+      margin-top: 20px;
+      font-weight: 750;
+    }
+
+    .process-box p {
+      color: var(--gray);
+    }
+
+    /* CTA */
+    .cta {
+      background:
+        linear-gradient(120deg, rgba(13,59,46,.97), rgba(29,107,79,.95));
+      color: white;
+      border-radius: 30px;
+      padding: 70px 30px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-weight: 800;
+      font-size: 2.6rem;
+    }
+
+    /* CONTACT */
+    .contact-card {
+      background: var(--light-green);
+      border-radius: 25px;
+      padding: 35px;
+      height: 100%;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 25px;
+    }
+
+    .contact-item i {
+      color: var(--secondary);
+      font-size: 25px;
+    }
+
+    .contact-item h6 {
+      margin-bottom: 4px;
+      font-weight: 750;
+    }
+
+    .contact-item p {
+      color: var(--gray);
+      margin: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #09271e;
+      color: #c9d8d1;
+      padding: 55px 0 25px;
+    }
+
+    footer h4 {
+      color: white;
+      font-weight: 800;
+    }
+
+    footer a {
+      color: #c9d8d1;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--accent);
+    }
+
+    .social a {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 50%;
+      margin-right: 7px;
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 58px;
+      height: 58px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 29px;
+      z-index: 999;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(0,0,0,.2);
+    }
+
+    .whatsapp:hover {
+      color: white;
+      transform: scale(1.08);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      section {
+        padding: 65px 0;
+      }
+
+      .hero {
+        min-height: 85vh;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .about-box {
+        padding: 30px;
+      }
+
+      .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      Star <span>GharVhada</span>
+    </a>
+
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#properties">Properties</a></li>
+        <li class="nav-item"><a class="nav-link" href="#process">How It Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="mb-3">
+        <span class="badge bg-light text-dark rounded-pill px-3 py-2">
+          Property Management • Nepal
+        </span>
+      </div>
+
+      <h1>
+        Your Property.<br>
+        <span>Our Responsibility.</span>
+      </h1>
+
+      <p class="mt-4">
+        Star GharVhada Pvt. Ltd. provides professional property
+        management services for landlords, tenants and property owners.
+        From tenant management and rent collection to maintenance and
+        property inspection, we help make property management simple.
+      </p>
+
+      <div class="mt-4 d-flex flex-wrap gap-3">
+        <a href="#properties" class="btn btn-main">
+          Explore Properties
+        </a>
+
+        <a href="#contact" class="btn btn-outline-light">
+          Contact Us
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+
+    <div class="section-title">
+      <small>About Us</small>
+      <h2>Welcome to Star GharVhada</h2>
+      <p>
+        A modern approach to property rental and management in Nepal.
+      </p>
+    </div>
+
+    <div class="row g-4 align-items-center">
+
+      <div class="col-lg-6">
+        <div class="about-box">
+
+          <h3>Making Property Management Simple</h3>
+
+          <p class="mt-3">
+            Star GharVhada Pvt. Ltd. is being developed as a professional
+            property management and rental service company in Nepal.
+          </p>
+
+          <p>
+            Our concept is to connect property owners and tenants while
+            helping manage the daily responsibilities associated with
+            rental properties.
+          </p>
+
+          <p>
+            Our services are designed around tenant management, rent
+            management, maintenance coordination, property inspection,
+            tenant placement and regular communication with property owners.
+          </p>
+
+          <div class="mt-4">
+            <a href="#services" class="btn btn-main">
+              Our Services
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <img
+          class="about-image"
+          src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80"
+          alt="Property Management">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SERVICES -->
+<section id="services" class="bg-light">
+  <div class="container">
+
+    <div class="section-title">
+      <small>What We Do</small>
+      <h2>Our Services</h2>
+      <p>
+        Complete support for property owners and tenants.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="bi bi-people"></i>
+          </div>
+          <h5>Tenant Management</h5>
+          <p>
+            Tenant communication, records, rental agreements and
+            day-to-day coordination.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="bi bi-cash-stack"></i>
+          </div>
+          <h5>Rent Management</h5>
+          <p>
+            Organized rent records, payment tracking and transparent
+            financial communication.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="bi bi-tools"></i>
+          </div>
+          <h5>Maintenance</h5>
+          <p>
+            Maintenance requests, repair coordination and follow-up
+            with property owners and tenants.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="bi bi-search"></i>
+          </div>
+          <h5>Property Inspection</h5>
+          <p>
+            Regular property inspection with reports, photos and
+            condition updates where required.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="bi bi-house-add"></i>
+          </div>
+          <h5>Tenant Placement</h5>
+          <p>
+            Property listing and tenant placement support for available
+            houses, flats, apartments, rooms and shops.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="bi bi-camera"></i>
+          </div>
+          <h5>Owner Reporting</h5>
+          <p>
+            Property owners can receive updates about rent, maintenance,
+            inspections and tenant status.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PROPERTY -->
+<section id="properties" class="property-section">
+  <div class="container">
+
+    <div class="section-title">
+      <small>Property Types</small>
+      <h2>Find Your Next Property</h2>
+      <p>
+        Houses, flats, apartments, rooms and commercial spaces.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="property-card">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80">
+          <div class="property-content">
+            <span class="badge-custom">House</span>
+            <h5 class="mt-3">Residential House</h5>
+            <p>
+              Suitable homes for families and long-term tenants.
+            </p>
+            <a href="#contact" class="btn btn-sm btn-main">
+              Enquire
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="property-card">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80">
+          <div class="property-content">
+            <span class="badge-custom">Flat / Apartment</span>
+            <h5 class="mt-3">Modern Apartment</h5>
+            <p>
+              Comfortable flats and apartments in convenient locations.
+            </p>
+            <a href="#contact" class="btn btn-sm btn-main">
+              Enquire
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="property-card">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1000&q=80">
+          <div class="property-content">
+            <span class="badge-custom">Room</span>
+            <h5 class="mt-3">Rental Room</h5>
+            <p>
+              Rental rooms for students, workers and individuals.
+            </p>
+            <a href="#contact" class="btn btn-sm btn-main">
+              Enquire
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PROPERTY MANAGEMENT FEATURES -->
+<section>
+  <div class="container">
+
+    <div class="section-title">
+      <small>For Property Owners</small>
+      <h2>One Place for Property Management</h2>
+      <p>
+        Designed to make rental property management more organized.
+      </p>
+    </div>
+
+    <div class="row g-4 text-center">
+
+      <div class="col-md-3">
+        <div class="service-card">
+          <div class="service-icon mx-auto">
+            <i class="bi bi-file-earmark-text"></i>
+          </div>
+          <h5>Records</h5>
+          <p>Tenant and property records organized in one place.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="service-card">
+          <div class="service-icon mx-auto">
+            <i class="bi bi-wallet2"></i>
+          </div>
+          <h5>Rent Tracking</h5>
+          <p>Keep rental payment information organized.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="service-card">
+          <div class="service-icon mx-auto">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+          <h5>Maintenance</h5>
+          <p>Coordinate repairs and maintenance requests.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="service-card">
+          <div class="service-icon mx-auto">
+            <i class="bi bi-camera-video"></i>
+          </div>
+          <h5>Inspection</h5>
+          <p>Property condition updates through inspection reports.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section id="process" class="bg-light">
+  <div class="container">
+
+    <div class="section-title">
+      <small>Simple Process</small>
+      <h2>How It Works</h2>
+      <p>
+        A simple process for landlords and tenants.
+      </p>
+    </div>
+
+    <div class="row g-5 text-center">
+
+      <div class="col-md-3">
+        <div class="process-box">
+          <div class="process-number">1</div>
+          <h5>Register Property</h5>
+          <p>
+            Property owner provides property details.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="process-box">
+          <div class="process-number">2</div>
+          <h5>Find Tenant</h5>
+          <p>
+            Suitable tenant enquiries and placement.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="process-box">
+          <div class="process-number">3</div>
+          <h5>Manage Property</h5>
+          <p>
+            Rent, tenant communication and maintenance management.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="process-box">
+          <div class="process-number">4</div>
+          <h5>Owner Updates</h5>
+          <p>
+            Regular reports and important property updates.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section>
+  <div class="container">
+
+    <div class="cta">
+
+      <h2>Looking for a Reliable Property Management Service?</h2>
+
+      <p class="mt-3 mb-4">
+        Let Star GharVhada help manage your rental property.
+      </p>
+
+      <a href="tel:9847351082" class="btn btn-main me-2">
+        <i class="bi bi-telephone"></i>
+        Call Now
+      </a>
+
+      <a href="https://wa.me/9779847351082"
+         target="_blank"
+         class="btn btn-outline-light">
+        <i class="bi bi-whatsapp"></i>
+        WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="bg-light">
+  <div class="container">
+
+    <div class="section-title">
+      <small>Get In Touch</small>
+      <h2>Contact Star GharVhada</h2>
+      <p>
+        Have a property or looking for a rental? Contact us.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-6">
+        <div class="contact-card">
+
+          <div class="contact-item">
+            <i class="bi bi-building"></i>
+            <div>
+              <h6>Company</h6>
+              <p>Star GharVhada Pvt. Ltd.</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="bi bi-geo-alt"></i>
+            <div>
+              <h6>Location</h6>
+              <p>Kageshwori Manohara-2, Kathmandu, Nepal</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="bi bi-telephone"></i>
+            <div>
+              <h6>Phone</h6>
+              <p>
+                <a href="tel:9847351082">
+                  9847351082
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="bi bi-whatsapp"></i>
+            <div>
+              <h6>WhatsApp</h6>
+              <p>
+                <a href="https://wa.me/9779847351082" target="_blank">
+                  Chat with us on WhatsApp
+                </a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="contact-card">
+
+          <h4 class="fw-bold mb-4">Send an Enquiry</h4>
+
+          <form id="contactForm">
+
+            <div class="mb-3">
+              <label class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name"
+                     placeholder="Enter your name" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone"
+                     placeholder="Enter phone number" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">What do you need?</label>
+              <select class="form-select" id="service">
+                <option>Property Management</option>
+                <option>House / Flat</option>
+                <option>Room</option>
+                <option>Shop</option>
+                <option>Tenant Placement</option>
+                <option>Maintenance</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" id="message"
+                        rows="4"
+                        placeholder="Write your message"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-main w-100">
+              Send via WhatsApp
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+
+    <div class="row g-4">
+
+      <div class="col-lg-5">
+        <h4>Star GharVhada</h4>
+        <p class="mt-3">
+          Professional property rental and management services
+          designed to make property ownership and renting easier.
+        </p>
+
+        <div class="social mt-4">
+          <a href="#" aria-label="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+
+          <a href="https://wa.me/9779847351082"
+             target="_blank"
+             aria-label="WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <h5 class="text-white">Quick Links</h5>
+
+        <ul class="list-unstyled mt-3">
+          <li class="mb-2">
+            <a href="#home">Home</a>
+          </li>
+          <li class="mb-2">
+            <a href="#about">About</a>
+          </li>
+          <li class="mb-2">
+            <a href="#services">Services</a>
+          </li>
+          <li class="mb-2">
+            <a href="#properties">Properties</a>
+          </li>
+          <li class="mb-2">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4">
+        <h5 class="text-white">Contact</h5>
+
+        <p class="mt-3 mb-2">
+          <i class="bi bi-geo-alt me-2"></i>
+          Kageshwori Manohara-2, Kathmandu
+        </p>
+
+        <p class="mb-2">
+          <i class="bi bi-telephone me-2"></i>
+          9847351082
+        </p>
+
+        <p>
+          <i class="bi bi-building me-2"></i>
+          Star GharVhada Pvt. Ltd.
+        </p>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary my-4">
+
+    <div class="text-center">
+      <small>
+        © <span id="year"></span> Star GharVhada Pvt. Ltd.
+        All Rights Reserved.
+      </small>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a
+  href="https://wa.me/9779847351082"
+  target="_blank"
+  class="whatsapp"
+  aria-label="WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+  /* Current Year */
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+  /* WhatsApp Contact Form */
+  document.getElementById("contactForm")
+    .addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      const name =
+        document.getElementById("name").value;
+
+      const phone =
+        document.getElementById("phone").value;
+
+      const service =
+        document.getElementById("service").value;
+
+      const message =
+        document.getElementById("message").value;
+
+      const whatsappMessage =
+        `Hello Star GharVhada Pvt. Ltd.%0A%0A` +
+        `Name: ${name}%0A` +
+        `Phone: ${phone}%0A` +
+        `Service: ${service}%0A` +
+        `Message: ${message}`;
+
+      window.open(
+        `https://wa.me/9779847351082?text=${whatsappMessage}`,
+        "_blank"
+      );
+
+    });
+
+
+  /* Navbar auto close on mobile */
+  document.querySelectorAll(".navbar-nav .nav-link")
+    .forEach(function(link) {
+
+      link.addEventListener("click", function() {
+
+        const navbar =
+          document.querySelector(".navbar-collapse");
+
+        if (navbar.classList.contains("show")) {
+
+          new bootstrap.Collapse(navbar).hide();
+
+        }
+
+      });
+
+    });
+
+</script>
+
+</body>
+</html>
